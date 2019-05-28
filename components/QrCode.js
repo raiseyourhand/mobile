@@ -18,8 +18,10 @@ export default class QrCode extends Component {
     catch(error) {
       data = {id: '-1'};
     }
-    this.props.setqrCodeId(data.id);
-    this.props.goToPath(ROUTES.FAILURE_PAGE);
+    const ra = this.props.navigation.getParam('ra', '');
+    this.props.navigation.navigate('Feedback', {'ra': ra, 'qrcodeid': data.id});
+    // this.props.setqrCodeId(data.id);
+    // this.props.goToPath(ROUTES.FAILURE_PAGE);
   }
 
   render() {
