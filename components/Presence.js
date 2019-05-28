@@ -16,6 +16,7 @@ export default class Presence extends Component {
       isLoading: true,
       msg: '',
     }
+    this.navigation = this.props.navigation;
   }
 
   url = (id) => {
@@ -23,8 +24,8 @@ export default class Presence extends Component {
   }
 
   componentDidMount() {
-    const userId = this.props.ra
-    const qrId = this.props.qrcodeid
+    const userId = this.navigation.getParam('ra', '');
+    const qrId = this.navigation.getParam('qrcodeid', '');
     const isPresence = true
     fetch(this.url(userId), {
       method: 'PATCH',
@@ -72,7 +73,7 @@ export default class Presence extends Component {
       else
         return <Failure
                   img={downImage}
-                  TouchableAction={() => this.props.goToPath(ROUTES.INPUT_PAGE)}
+                  TouchableAction={() => this.navigation.navigate('UserInput')}
                >
                 {this.state.msg}
               </Failure>

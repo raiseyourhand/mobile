@@ -23,6 +23,8 @@ export default class User extends Component {
     }
 
     render() {
+
+
         return (
           <ImageBackground
             source={background}
@@ -39,7 +41,7 @@ export default class User extends Component {
                 style={styles.input}
               />
               <TouchableOpacity
-                onPress={() => this.props.goToPath(ROUTES.CAMERA_PAGE)}
+                onPress={() => this.props.navigation.navigate('Camera', {'ra': this.state.ra})}
                 style={styles.button}
               >
                 <Text style={styles.textButton}>Ler Qr Code</Text>
@@ -59,7 +61,6 @@ export default class User extends Component {
       this.setState({
         ra: ra,
       });
-      this.props.setRa(ra);
     }
 
     goToPrivacy = () => {
