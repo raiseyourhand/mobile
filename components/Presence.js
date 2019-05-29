@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {BackHandler} from 'react-native';
 
-import * as ROUTES from './constants';
 import {Success, Failure} from './Notifications'
 
 const upImage = require('../images/up.png');

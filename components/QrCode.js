@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, View, Image} from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import * as ROUTES from './constants';
 
 const gridImage = require('../images/grid.png');
 
