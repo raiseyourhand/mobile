@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {AppRegistry, Button, Text, TextInput, View, ImageBackground} from 'react-native';
-
 import {createStackNavigator, createAppContainer} from 'react-navigation';
+import { useScreens } from 'react-native-screens';
 
-import {User, QrCode, Presence} from './components/constants';
+import {User, QrCode, Presence} from './components/screens';
+
+useScreens();
 
 const MainNavigator = createStackNavigator(
   {

@@ -8,8 +8,6 @@ import {TouchableOpacity,
         Image,
         Linking} from 'react-native';
 
-import * as ROUTES from './constants';
-
 const fadergsImage = require('../images/fadergs.png');
 const background = require('../images/background.jpg');
 
